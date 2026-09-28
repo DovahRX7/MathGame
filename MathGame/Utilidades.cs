@@ -6,6 +6,7 @@ namespace MathGame
 {
     internal class Utilidades
     {
+        //Método para leer la respuesta del usuario y comprobar que está en el formato válido
         public static int leerOpcion()
         {
             int opcion;

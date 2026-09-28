@@ -8,6 +8,7 @@ namespace MathGame
 {
     class CrearOperaciones
     {
+        //Suma
         public static void crearSuma(Partida partidaActual)
         {
             int n1 = RandomNumberGenerator.GetInt32(101);
@@ -23,6 +24,7 @@ namespace MathGame
             comprobarRespuesta(partidaActual, resultado, respuesta);
         }
 
+        //Resta
         public static void crearResta(Partida partidaActual)
         {
             int n1 = RandomNumberGenerator.GetInt32(101);
@@ -38,6 +40,7 @@ namespace MathGame
             comprobarRespuesta(partidaActual, resultado, respuesta);
         }
 
+        //Multiplicación
         public static void crearMultiplicacion(Partida partidaActual)
         {
             int n1 = RandomNumberGenerator.GetInt32(101);
@@ -53,12 +56,14 @@ namespace MathGame
             comprobarRespuesta(partidaActual, resultado, respuesta);
         }
 
+        //División
         public static void crearDivision(Partida partidaActual)
         {
-            System.Boolean sumaValida = false;
+            System.Boolean divValida = false;
             int n1 = 0;
             int n2 = 0;
 
+            //Asegura que el resultado de la división sea entero
             do
             {
                 n1 = RandomNumberGenerator.GetInt32(101);
@@ -66,10 +71,10 @@ namespace MathGame
 
                 if (n1 % n2 == 0)
                 {
-                    sumaValida = true;
+                    divValida = true;
                 }
 
-            } while (sumaValida == false);
+            } while (divValida == false);
 
             int resultado = n1 / n2;
 
@@ -81,6 +86,7 @@ namespace MathGame
             comprobarRespuesta(partidaActual, resultado, respuesta);
         }
 
+        //Comprueba si la respuesta que da el usuario a una operación es correcta y suma un punto si lo es
         public static void comprobarRespuesta(Partida partidaActual, int resultado,int respuesta)
         {
             if (resultado == respuesta)
